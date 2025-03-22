@@ -3,7 +3,7 @@ import './App.css';
 import Alert from './Component/Alert';
 import Navbar from './Component/Navbar';
 import TextForm from './Component/TextForm';
-//import About from './About';
+import About from './About';
 
 import {
   BrowserRouter as Router,
@@ -51,17 +51,17 @@ function App() {
 
   return (
     <>
-      //<Router>
+      <Router>
         <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
         <Alert alert={alert} />
         <div className='container my-3'>
-         /* <Routes>
+          <Routes>
             <Route exact path='/about' element={<About />} />
             <Route exact path='/' element={<TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} />} />
           </Routes>*/
-          <TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} /
+          <TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} />
         </div>
-     // </Router>
+     </Router>
     </>
   );
 }
